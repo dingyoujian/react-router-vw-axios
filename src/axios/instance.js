@@ -21,33 +21,33 @@ instance.interceptors.response.use(function (response) {
 });
 
 function getBaseURL() {
-    let baseURL = 'http://172.16.150.198:54673/v1';
+    let baseURL = 'http://172.16.150.198:54673';
     const origin = window.location.origin;
 
     switch (origin) {
-        case 'http://172.16.152.117':
+        case '':
             //test环境
-            baseURL = 'http://172.16.152.109:54671/v1';
+            baseURL = '';
             break;
-        case 'http://172.16.151.159':
+        case '':
             //foftest环境
-            baseURL = 'http://172.16.151.160:54671/v1';
+            baseURL = '';
             break;
-        case 'http://galaxysit.qiangungun.com':
+        case '':
             //sit环境
-            baseURL = 'http://mobilesit.qiangungun.com/v1';
+            baseURL = '';
             break;
-        case 'https://galaxypre.qiangungun.com':
+        case '':
             //预发环境
-            baseURL = 'https://mobilepre.qiangungun.com/v1';
+            baseURL = '';
             break;
-        case 'https://galaxy.qiangungun.com':
+        case '':
             //生产环境
-            baseURL = 'https://mobile.qiangungun.com/v1';
+            baseURL = '';
             break;
         default:
             //默认开发环境
-            baseURL = 'http://172.16.150.198:54673/v1';
+            baseURL = 'http://172.16.150.198:54673';
     }
     return baseURL;
 }

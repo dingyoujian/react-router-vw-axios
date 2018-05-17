@@ -1,0 +1,160 @@
+.productHeader {
+  font-family: PingFangSC;
+  position: relative;
+  display: flex;
+  height: 80px;
+  padding: 0 20px;
+  align-items: baseline;
+  line-height: 80px;
+  border-bottom: solid 1px #eeeeee; }
+  .productHeader .p_icon {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    top: 6px; }
+  .productHeader .p_title {
+    margin-left: 10px;
+    font-size: 32px;
+    font-weight: 500;
+    color: #434343; }
+  .productHeader .p_sub {
+    margin-left: 12px;
+    color: #999999;
+    font-size: 24px; }
+  .productHeader .p_more {
+    position: absolute;
+    right: 30px;
+    line-height: 80px;
+    display: inline-block; }
+    .productHeader .p_more span {
+      font-size: 22px;
+      color: #999999; }
+    .productHeader .p_more img {
+      position: relative;
+      width: 12px;
+      margin-left: 10px;
+      top: 3px; }
+
+.gqbFooter {
+  height: 60px;
+  border-top: solid 1px #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  color: #999999;
+  font-size: 20px;
+  align-items: center; }
+  .gqbFooter .g_item:before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: #cbcbcb;
+    margin-right: 5px; }
+
+.productThreeLayers {
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  .productThreeLayers .p_title {
+    font-size: 28px;
+    color: #434343; }
+  .productThreeLayers .p_rate {
+    font-size: 60px;
+    color: #fd7753; }
+    .productThreeLayers .p_rate span {
+      font-size: 36px; }
+  .productThreeLayers .p_desc {
+    font-size: 22px;
+    color: #999999; }
+
+.productTypeOne {
+  padding: 30px 0px;
+  display: flex; }
+  .productTypeOne .p_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 260px;
+    border-right: 1px solid #eeeeee;
+    padding: 0 20px; }
+    .productTypeOne .p_left .p_rate {
+      font-size: 46px;
+      line-height: 46px; }
+    .productTypeOne .p_left .p_desc {
+      margin-top: 10px;
+      font-size: 22px;
+      color: #999; }
+  .productTypeOne .p_right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 20px; }
+    .productTypeOne .p_right .p_title {
+      font-size: 26px; }
+    .productTypeOne .p_right .p_remark {
+      font-size: 22px;
+      color: #999; }
+
+.productTypeTwo {
+  padding: 40px 0px;
+  display: flex;
+  justify-content: space-between; }
+  .productTypeTwo .p_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-right: 28px; }
+    .productTypeTwo .p_right .p_rate {
+      font-size: 36px;
+      line-height: 36px; }
+    .productTypeTwo .p_right .p_desc {
+      margin-top: 20px;
+      font-size: 22px;
+      color: #999; }
+  .productTypeTwo .p_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px; }
+    .productTypeTwo .p_left .p_title {
+      font-size: 28px; }
+    .productTypeTwo .p_left .p_remark {
+      font-size: 22px;
+      color: #999; }
+
+.productCurrencyComb {
+  height: 280px;
+  padding: 44px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee; }
+  .productCurrencyComb .p_title {
+    font-size: 28px;
+    color: #434343; }
+  .productCurrencyComb .p_rate {
+    font-size: 60px; }
+    .productCurrencyComb .p_rate span {
+      font-size: 36px; }
+  .productCurrencyComb .p_remark {
+    font-size: 32px;
+    color: #434343; }
+  .productCurrencyComb .p_desc {
+    color: #999999;
+    font-size: 22px !important; }
+  .productCurrencyComb .p_risk {
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-top-left-radius: 18px;
+    font-size: 18px;
+    margin-left: 6px;
+    padding: 0 6px; }
