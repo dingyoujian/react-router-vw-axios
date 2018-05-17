@@ -1,0 +1,18 @@
+.header {
+  position: relative;
+  width: 750px;
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  line-height: 80px; }
+  .header .h_back {
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    height: 38px; }
+  .header .h_title {
+    line-height: 80px;
+    font-size: 32px;
+    color: #434343; }

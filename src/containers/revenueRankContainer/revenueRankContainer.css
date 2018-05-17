@@ -1,0 +1,18 @@
+.revenueRankContainer {
+  background-color: #fff;
+  margin-bottom: 22px; }
+  .revenueRankContainer .revenueRankList {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #eeeeee; }
+    .revenueRankContainer .revenueRankList .rRL_left {
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 22px; }
+    .revenueRankContainer .revenueRankList .rRL_right {
+      flex: 1; }
+    .revenueRankContainer .revenueRankList .rRL_top {
+      height: 80px;
+      width: 80px; }

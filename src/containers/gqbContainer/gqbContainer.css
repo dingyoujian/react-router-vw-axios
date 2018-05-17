@@ -1,0 +1,15 @@
+.gqbContainer {
+  position: relative;
+  margin: 25px;
+  background-color: #fff;
+  border: solid 1px #eeeeee;
+  box-shadow: 0px 0px 14px #eeeeee;
+  border-radius: 4px; }
+  .gqbContainer .gqb_welfare {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px; }
+    .gqbContainer .gqb_welfare img {
+      width: 60px;
+      height: 60px; }

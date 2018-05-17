@@ -1,0 +1,19 @@
+.listHeader {
+  height: 72px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 24px;
+  color: #999999;
+  border-bottom: 1px solid #eeeeee;
+  width: 750px; }
+  .listHeader .l_title {
+    flex: 1;
+    text-align: center; }
+  .listHeader .l_title_content {
+    display: inline-block;
+    height: 100%;
+    line-height: 68px; }
+  .listHeader .l_current {
+    color: #fd7753;
+    border-bottom: 4px solid #fd7753; }
