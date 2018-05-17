@@ -18,7 +18,6 @@ Object.assign = require('object-assign');
 //引用async await
 require('core-js/library/core/delay');
 require('core-js/library/fn/delay');
-require('babel-plugin-transform-decorators-legacy');
 
 window.Set = require('core-js/library/fn/set');
 // In tests, polyfill requestAnimationFrame since jsdom doesn't provide it yet.
