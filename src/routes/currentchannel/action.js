@@ -16,12 +16,25 @@ export default class CurrentChannelAction {
         })
     }
 
-    //获取滚钱宝
-    @action getGqbYield = () => {
-        httpService.getFundDetail({'productId': '600001'}).then((res) => {
-            runInAction(() => {
-                this.store.gqbDetail = res;
+    //获取滚钱宝详情和加送收益
+    @action getGqbAndNovice = async (...params) => {
+        let noviceList = [];
+        let gqbDetail = {};
+
+        await httpService.getNovicePrize(...params).then((res) => {
+            res.prizeInfoList.forEach((item) => {
+                if (item.prizeType === '04') {
+                    noviceList.push(item);
+                }
             })
+        })
+        await httpService.getFundDetail({'productId': '600001'}).then((res) => {
+            gqbDetail = res;
+        })
+
+        runInAction(() => {
+            this.store.noviceList = noviceList;
+            this.store.gqbDetail = gqbDetail;
         })
     }
 
@@ -42,19 +55,6 @@ export default class CurrentChannelAction {
             runInAction(() => {
                 this.store.currentList = res.productList;
                 this.store.currentType = params[0].productSort;
-            })
-        })
-    }
-
-    //获取滚钱宝加送收益
-    @action getNovicePrize = (...params) => {
-        httpService.getNovicePrize(...params).then((res) => {
-            runInAction(() => {
-                res.prizeInfoList.forEach((item) => {
-                    if (item.prizeType === '04') {
-                        this.store.noviceList.push(item);
-                    }
-                })
             })
         })
     }

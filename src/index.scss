@@ -1,6 +1,6 @@
 *, :after, :before {
     box-sizing: border-box;
-    cursor: pointer;//解决onclick不能正常执行的问题
+    // cursor: pointer;//解决onclick不能正常执行的问题
 }
 body {
     margin: 0;

@@ -12,8 +12,7 @@ import ProductTypeOne from '../../components/product/productTypeOne'
 class GqbContainer extends Component {
 
     componentDidMount() {
-        this.props.action.getNovicePrize({'activityId': CONSTANT.ACTIVITY_ID.NOVICE});
-        this.props.action.getGqbYield();
+        this.props.action.getGqbAndNovice({'activityId': CONSTANT.ACTIVITY_ID.NOVICE});
     }
 
     covertNavDate(navDate) {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {observer} from "mobx-react"
+import {observer, inject} from "mobx-react"
 import CONSTANT from '../../common/constant'
 import CurrentChannelStore from './store'
 import CurrentChannelAction from './action'
@@ -12,6 +12,7 @@ import './index.css'
 const store = new CurrentChannelStore();
 const action = new CurrentChannelAction(store);
 
+@inject("commonStore")
 @observer
 class CurrentChannel extends Component {
 
@@ -22,7 +23,7 @@ class CurrentChannel extends Component {
     render() {
         return (
             <div className="channel">
-                <Header title="活期优选" client={store.client}></Header>
+                <Header title="活期优选" client={this.props.commonStore.client}></Header>
                 <Swipes swipes={store.carousels}></Swipes>
                 <GqbContainer action={action} store={store}></GqbContainer>
                 <RevenueRankContainer action={action} store={store}></RevenueRankContainer>
