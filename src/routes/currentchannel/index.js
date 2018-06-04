@@ -1,33 +1,29 @@
 import React, { Component } from 'react'
 import {observer, inject} from "mobx-react"
 import CONSTANT from '../../common/constant'
-import CurrentChannelStore from './store'
-import CurrentChannelAction from './action'
 import Swipes from '../../components/swipes/swipes'
 import Header from '../../components/header/header'
 import GqbContainer from '../../containers/gqbContainer/gqbContainer'
 import RevenueRankContainer from '../../containers/revenueRankContainer/revenueRankContainer'
 import CurrencyCombContainer from '../../containers/currencyCombContainer/currencyCombContainer'
 import './index.css'
-const store = new CurrentChannelStore();
-const action = new CurrentChannelAction(store);
 
-@inject("commonStore")
+@inject("commonStore", "currentChannelStore", "currentChannelAction")
 @observer
 class CurrentChannel extends Component {
 
     componentDidMount() {
-        action.getCarousels({'tabSite': CONSTANT.TAB_SITE.CURRENTCHANNEL});//获取活期频道轮播图列表
+        this.props.currentChannelAction.getCarousels({'tabSite': CONSTANT.TAB_SITE.CURRENTCHANNEL});//获取活期频道轮播图列表
     }
 
     render() {
         return (
             <div className="channel">
                 <Header title="活期优选" client={this.props.commonStore.client}></Header>
-                <Swipes swipes={store.carousels}></Swipes>
-                <GqbContainer action={action} store={store}></GqbContainer>
-                <RevenueRankContainer action={action} store={store}></RevenueRankContainer>
-                <CurrencyCombContainer action={action} store={store}></CurrencyCombContainer>
+                <Swipes swipes={this.props.currentChannelStore.carousels}></Swipes>
+                <GqbContainer action={this.props.currentChannelAction} store={this.props.currentChannelStore}></GqbContainer>
+                <RevenueRankContainer action={this.props.currentChannelAction} store={this.props.currentChannelStore}></RevenueRankContainer>
+                <CurrencyCombContainer action={this.props.currentChannelAction} store={this.props.currentChannelStore}></CurrencyCombContainer>
             </div>
         )
     }

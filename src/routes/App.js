@@ -6,17 +6,14 @@ import {
 } from 'react-router-dom'
 import asyncComponent from './AsyncComponent'
 import { Provider } from "mobx-react"
-import CommonStore from './store'
-import CommonAction from './action'
+import stores from './stores'
 
 //异步加载currentchannel组件
 const CurrentChannel = asyncComponent(() => import("./currentchannel/index"))
-const store = new CommonStore();
-const action = new CommonAction(store);
 
 const App = () => (
     <div>
-        <Provider commonStore={store} commonAction={action}>
+        <Provider {...stores}>
             <Router>
                 <div>
                     <Route exact path="/home" component={Home}/>

@@ -25,9 +25,9 @@ const ProductCurrencyComb = ({title, rate, desc, remark, riskLevel, riskName, ha
     return (
         <div className="productCurrencyComb" onClick={handleClick}>
             <div className="p_title">{title}
-                <RiskLevel riskLevel={fofRisk[riskLevel].level} render={
+                <RiskLevel riskLevel={riskLevel && fofRisk[riskLevel].level} render={
                     risk => (
-                        <span className="p_risk" style={risk.style}>{riskName}</span>
+                        <span className="p_risk" style={risk && risk.style}>{riskName}</span>
                     )
                 }></RiskLevel>
             </div>
